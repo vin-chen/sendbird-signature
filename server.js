@@ -15,6 +15,7 @@ app.post("/webhook", (req, res, next)=>{
         headers: req.headers,
         body: req.body
     }
+    console.log(result);
     res.json(result);
 })
 
