@@ -11,7 +11,11 @@ app.get("/", (req, res, next)=>{
 })
 
 app.post("/webhook", (req, res, next)=>{
-    res.json(req);
+    const result = {
+        headers: req.headers,
+        body: req.body
+    }
+    res.json(result);
 })
 
 app.listen(PORT, ()=>{
