@@ -10,7 +10,7 @@ app.get("/", (req, res, next)=>{
     res.end("cool");
 })
 
-app.get("/webhook", (req, res, next)=>{
+app.post("/webhook", (req, res, next)=>{
     res.json(req);
 })
 
