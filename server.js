@@ -13,7 +13,7 @@ app.get("/", (req, res, next)=>{
 app.post("/webhook", (req, res, next)=>{
     const result = {
         headers: req.headers,
-        body: req.body
+        body: JSON.stringify(req.body)
     }
     console.log(result);
     res.json(result);
