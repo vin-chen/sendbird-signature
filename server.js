@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 
-const MASTER_TOKEN = 'my token';
+const MASTER_TOKEN = '0a9c1297db403d32b76763c496dc0f54b22680a7';
 
 app.get("/", (req, res, next) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
