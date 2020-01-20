@@ -4,8 +4,8 @@ const crypto =  require('crypto');
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.json({type:'application/json',verify: (req, res, buf, encoding)=>{
-    req.rawBody = buf.toString(encoding || 'utf8');
-    // req.rawBody = buf;
+    // req.rawBody = buf.toString(encoding || 'utf8');
+    req.rawBody = buf;
 }}));
 app.use(express.urlencoded({ extended: true }))
 
